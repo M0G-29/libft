@@ -6,9 +6,12 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:06:48 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/19 12:31:11 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/19 13:55:47 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+#include <string.h>
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
