@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/15 14:04:02 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/15 14:04:02 by lpaulo-d         ###   ########.fr       */
+/*   Created: 2021/05/17 13:16:21 by lpaulo-d          #+#    #+#             */
+/*   Updated: 2021/05/17 13:16:21 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset (void *dest, int str, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*n_dest;
-	size_t	i;
+	unsigned char	*new_dest;
+	const char	*new_src;
+	size_t i;
 
 	i = 0;
-	n_dest = (unsigned char *) dest;
-	while (n-- > 0)
-		n_dest[i++] = (unsigned char) str;
+	new_dest = (unsigned char *)dest;
+	new_src = (const char *)src;
+	if (dest > src)
+		while (n--)
+			new_dest[n] = new_src[n];
+	else
+	{
+		while (i > n)
+		{
+		new_dest[i] = new_src[i];
+		i++;
+		}
+	}
 	return (dest);
 }
+
