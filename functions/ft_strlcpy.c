@@ -6,13 +6,9 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:01:58 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 13:45:02 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/20 16:07:14 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <bsd/string.h>
-
 
 size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 {
