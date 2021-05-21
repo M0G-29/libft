@@ -6,9 +6,11 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:50:40 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 16:53:30 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:54:54 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isdigit(int c)
 {

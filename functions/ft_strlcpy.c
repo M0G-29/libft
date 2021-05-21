@@ -6,11 +6,11 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:01:58 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/21 09:55:25 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:54:19 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 {

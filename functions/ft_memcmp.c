@@ -6,9 +6,11 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:06:48 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 22:16:40 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:54:39 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

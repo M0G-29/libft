@@ -6,9 +6,11 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:52:50 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 16:53:26 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:54:48 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isnum(int c)
 {

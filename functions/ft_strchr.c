@@ -6,9 +6,11 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 20:50:17 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 12:07:59 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:54:27 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
