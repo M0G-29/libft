@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:18:23 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 12:30:57 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 09:55:50 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	return (NULL);
+	return (0);
 }
