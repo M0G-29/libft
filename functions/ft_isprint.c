@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/19 12:06:48 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/20 22:16:40 by lpaulo-d         ###   ########.fr       */
+/*   Created: 2021/05/20 16:56:23 by lpaulo-d          #+#    #+#             */
+/*   Updated: 2021/05/20 16:59:06 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_isprint(int c)
 {
-	unsigned char	*ss1;
-	unsigned char	*ss2;
-	size_t			i;
-
-	i = 0;
-	ss1 = (unsigned char *)s1;
-	ss2 = (unsigned char *)s2;
-	while (n--)
-	{
-		if (ss1[i] != ss2[i])
-			return (ss1[i] - ss2[i]);
-		i++;
-	}
-	return (0);
+	if (c >= ' ' && c <= '~')
+		return (1);
+	else
+		return (0);
 }
