@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 14:58:46 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/21 15:02:40 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/21 19:25:36 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 int	ft_isprint(int c);
 int ft_isnum(int c);
 int ft_isdigit(int c);
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
 int ft_isascii(int c);
 int ft_isalpha(int c);
 void	ft_bzero(void *s, size_t len);
