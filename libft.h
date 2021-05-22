@@ -6,18 +6,18 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 14:58:46 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/22 16:03:59 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/22 18:45:04 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
 # include <strings.h>
 # include <bsd/string.h>
-# include <stdlib.h>
 
 
 char	*ft_strrchr(const char *s, int c);
@@ -39,5 +39,8 @@ int ft_isascii(int c);
 int ft_isalpha(int c);
 void	ft_bzero(void *s, size_t len);
 int ft_atoi(const char *nptr);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
 
 #endif
