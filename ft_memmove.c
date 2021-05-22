@@ -24,13 +24,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest > src)
 		while (n--)
 			new_dest[n] = new_src[n];
+			
 	else
-	{
-		while (i > n)
-		{
-		new_dest[i] = new_src[i];
-		i++;
-		}
-	}
+		ft_memcpy(new_dest, new_src, n);
 	return (dest);
 }

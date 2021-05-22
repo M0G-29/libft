@@ -6,7 +6,7 @@
 #    By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 20:27:12 by lpaulo-d          #+#    #+#              #
-#    Updated: 2021/05/21 19:46:16 by lpaulo-d         ###   ########.fr        #
+#    Updated: 2021/05/22 12:21:12 by lpaulo-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 SRC =	ft_isalpha.c\
 		ft_isascii.c\
 		ft_isdigit.c\
-		ft_isnum.c\
+		ft_isalnum.c\
 		ft_isprint.c\
 		ft_memccpy.c\
 		ft_memchr.c\
@@ -44,6 +44,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $@ $^
+
+%.o: %.c
+	$(CC) -c $(FLAGS) -o $@ $<
 
 clean:
 	rm -f $(OBJ)

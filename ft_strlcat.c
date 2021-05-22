@@ -6,32 +6,29 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 19:31:38 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/21 19:41:24 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/22 16:06:09 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	ld;
-	size_t	s;
-	size_t	ls;
+	size_t	len_dst;
+	size_t	i;
 
-	ld = 0;
-	ls = 0;
-	s = 0;
-	while (dest[ld] != '\0' && ld < size)
-		ld++;
-	while (src[ls] != '\0')
-		ls++;
-	if (ld > size - 1)
-		return (ld + ls);
-	while (src[s] != '\0' && (ld + s) < (size - 1))
+	len_dst = 0;
+	while (dst[len_dst] && len_dst < size)
+		len_dst++;
+	i = 0;
+	if (len_dst < size)
 	{
-		dest[ld + s] = src[s];
-		s++;
+		while ((i + len_dst) < (size - 1) && src[i])
+		{
+			dst[i + len_dst] = src[i];
+			i++;
+		}
+		dst[i + len_dst] = '\0';
 	}
-	dest[ld + s] = '\0';
-	return (ld + ls);
+	return (len_dst + ft_strlen(src));
 }
