@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 14:58:46 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/22 18:45:04 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/22 20:46:27 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ int ft_atoi(const char *nptr);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+void	*ft_calloc(size_t nmemb, size_t size);
+
 
 #endif
