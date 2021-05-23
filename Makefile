@@ -6,7 +6,7 @@
 #    By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 20:27:12 by lpaulo-d          #+#    #+#              #
-#    Updated: 2021/05/22 20:45:57 by lpaulo-d         ###   ########.fr        #
+#    Updated: 2021/05/23 16:58:00 by lpaulo-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRC =	ft_isalpha.c\
 		ft_strlcat.c\
 		ft_tolower.c\
 		ft_toupper.c\
-		ft_calloc.c
+		ft_calloc.c\
+		ft_strdup.c
 
 NAME = libft.a
 
