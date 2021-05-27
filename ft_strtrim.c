@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 23:15:38 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/25 19:57:21 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/27 19:40:42 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,4 @@ char *ft_strtrim(char const *s1, char const *set)
 	//ft_substr(alloc, s1 + start, end - start + 1);
 	//return (strdup(s1));
 	return (ft_substr(s1, 0, start + 1));
-}
-
-int main ()
-{
-	
 }

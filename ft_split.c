@@ -6,44 +6,48 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 18:48:13 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/27 15:59:19 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/27 19:39:54 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//clermalloc --
-//mallocposi --
-//count words --
-//??copia com dup?? ???
-// TALVEZ PASAR S PARA UMA *TEMP ????
-
-static int	ft_countword(const char *s, char c)
+static size_t	ft_countword(const char *s, char c)//conta quantas palavras tem para dividir
 {
-	unsigned int	crc;
-	unsigned int	wrd;
+	size_t	i;
+	size_t	wrd;
 
-	crc = 0;
 	wrd = 0;
-	while (s[crc] != '\0')
+	i = 0;
+	while (*s && *s == c)
+		s++;
+	while (s[i])
 	{
-		while (s[crc] == c) //enquanto for igual ao c. Saiu daqui quer dizer q começou a palavra
-			crc++;
-		if (s[crc] != c)
-			wrd++;//se n for nulo quer dizer q é uma palvra incrementa um e vai contar as palavras
-		while (s[crc] != '\0' && s[crc] != c)
-			crc++;//continua avançando pq precisa ir ate o fim para ssaber se tem mais ao sair daqui
-			//ele vai conferir dnv o primeiro while para ver se acabou a palavra e tem mais ou acabou tudo
+		if (i == 0)
+			wrd++;
+		else if (s[i - 1] == c && s[i] != c)
+			wrd++;
+		i++;
 	}
-	return (wrd);//agr sei quantas palavras tem para alocar os ponteiros
+	return (wrd);
 }
 
-static char	**ft_free(char **tab)
+static size_t ft_lenwrd(char const *s, char c)//conta quantos caracteres tem na plavra
 {
-	unsigned int	i;
+	size_t size;
+
+	size = 0;
+	while (s[size] != '\0' && s[size] != c)
+		size++;
+	return (size);
+}
+
+static char	**ft_free(char **tab ,size_t len)//limpa a alocacao se deu ruim
+{
+	size_t	i;
 	
 	i = 0;
-	while (tab[i])
+	while (i < len)
 	{
 		free(tab[i]);//limpa ponteiro por ponteiro
 		i++;
@@ -52,35 +56,30 @@ static char	**ft_free(char **tab)
 	return (NULL);
 }
 
-char **ft_cpy(char *tab)
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	unsigned int	c1;
-	unsigned int	c2;
-	unsigned int	i;
-	char			**tab;
+	char	**tab;
+	size_t	wrd;
+	size_t	i;
+	size_t	size;
 
-	c1 = 0;
-	c2 = 0;
 	i = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_countword(s, c) + 1)); /*aqui aloco so espaços no tab[WRD] dps tem q alocar para
-	as palavras em cada tab[WRD]*/
-	while (s[c1] != '\0')
+	wrd = ft_countword(s, c);
+	tab = (char **)malloc(sizeof(char *) * (wrd + 1));//aloca wrd ponteiros + 1
+	if (tab == NULL)
+		return (NULL);
+	i = 0;
+	while (i < wrd)
 	{
-		while (s[c1] == c)
-			c1++;
-		c2 = c1;//aqui armazeno o valor de c1 pq ai sei quando começa o palavra vou usr dps
-		while (s[c1] != '\0' && s[c1] != c)//aqui ja começo ver o tamanho da palavra
-			c1++;
-		if (c1 > c2)//aqui garanto q é uma palvra e começo a alocar e copiar
-		{
-			tab[i] = (char *)malloc(sizeof(char) * (c1 - c2 + 1));//aloca espeço na matriz para a string
-			if (tab[i] == NULL)
-				return (ft_free(tab));//se der ruim ja faz o free
-			ft_strlcpy(tab[i], s + c2, (c1 - c2 + 1));
-			i++;//incrementa o i e repete o while se ainda for verdadeiro
-		}
+		while (*s != '\0' && *s == c)//confere se no começo tem o parametro c
+			s++;
+		size = ft_lenwrd(s, c);// tamnho da palavra o *s ja ta na posicao q queremos
+		tab[i] = ft_substr(s, 0, size);//copia com o start e end e aloca
+		if (!tab[i])//se deu ruim limpa geral
+			return (ft_free(tab, i));
+		s += (size + 1);//interatividade assim n perdemos a posicao e continuamos de onde paramos
+		i++;
 	}
 	tab[i] = NULL;
 	return (tab);
