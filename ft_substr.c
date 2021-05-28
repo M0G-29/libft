@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 17:18:37 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/28 12:21:47 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/23 17:50:14 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*cpy;
-	size_t			i;
+	unsigned int	i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
 	cpy = (char *)malloc(sizeof(char) * (len + 1));
 	if (cpy == NULL)
 		return (NULL);
