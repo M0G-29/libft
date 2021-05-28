@@ -6,11 +6,9 @@
 #    By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 20:27:12 by lpaulo-d          #+#    #+#              #
-#    Updated: 2021/05/27 15:29:08 by lpaulo-d         ###   ########.fr        #
+#    Updated: 2021/05/28 19:38:21 by lpaulo-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
 
 SRC =	ft_isalpha.c\
 		ft_isascii.c\
@@ -39,7 +37,12 @@ SRC =	ft_isalpha.c\
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
-		ft_split.c
+		ft_split.c\
+		ft_itoa.c\
+		ft_putnbr_fd.c\
+		ft_putstr_fd.c\
+		ft_putchar_fd.c\
+		ft_putendl_fd.c
 
 NAME = libft.a
 
