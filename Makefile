@@ -6,7 +6,7 @@
 #    By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 20:27:12 by lpaulo-d          #+#    #+#              #
-#    Updated: 2021/05/28 19:38:21 by lpaulo-d         ###   ########.fr        #
+#    Updated: 2021/05/29 14:52:23 by lpaulo-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SRC =	ft_isalpha.c\
 		ft_putnbr_fd.c\
 		ft_putstr_fd.c\
 		ft_putchar_fd.c\
-		ft_putendl_fd.c
+		ft_putendl_fd.c\
+		ft_strmapi.c
 
 NAME = libft.a
 

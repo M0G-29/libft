@@ -6,13 +6,13 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 18:48:13 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/27 19:39:54 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/29 15:08:10 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_countword(const char *s, char c)//conta quantas palavras tem para dividir
+static size_t	ft_countword(const char *s, char c)
 {
 	size_t	i;
 	size_t	wrd;
@@ -32,9 +32,9 @@ static size_t	ft_countword(const char *s, char c)//conta quantas palavras tem pa
 	return (wrd);
 }
 
-static size_t ft_lenwrd(char const *s, char c)//conta quantos caracteres tem na plavra
+static size_t	ft_lenwrd(char const *s, char c)
 {
-	size_t size;
+	size_t		size;
 
 	size = 0;
 	while (s[size] != '\0' && s[size] != c)
@@ -42,20 +42,19 @@ static size_t ft_lenwrd(char const *s, char c)//conta quantos caracteres tem na 
 	return (size);
 }
 
-static char	**ft_free(char **tab ,size_t len)//limpa a alocacao se deu ruim
+static char	**ft_free(char **tab, size_t len)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < len)
 	{
-		free(tab[i]);//limpa ponteiro por ponteiro
+		free(tab[i]);
 		i++;
 	}
-	free(tab);//limpa o ponteiro do ponteiro
+	free(tab);
 	return (NULL);
 }
-
 
 char	**ft_split(char const *s, char c)
 {
@@ -66,19 +65,19 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	wrd = ft_countword(s, c);
-	tab = (char **)malloc(sizeof(char *) * (wrd + 1));//aloca wrd ponteiros + 1
+	tab = (char **)malloc(sizeof(char *) * (wrd + 1));
 	if (tab == NULL)
 		return (NULL);
 	i = 0;
 	while (i < wrd)
 	{
-		while (*s != '\0' && *s == c)//confere se no começo tem o parametro c
+		while (*s != '\0' && *s == c)
 			s++;
-		size = ft_lenwrd(s, c);// tamnho da palavra o *s ja ta na posicao q queremos
-		tab[i] = ft_substr(s, 0, size);//copia com o start e end e aloca
-		if (!tab[i])//se deu ruim limpa geral
+		size = ft_lenwrd(s, c);
+		tab[i] = ft_substr(s, 0, size);
+		if (!tab[i])
 			return (ft_free(tab, i));
-		s += (size + 1);//interatividade assim n perdemos a posicao e continuamos de onde paramos
+		s += (size + 1);
 		i++;
 	}
 	tab[i] = NULL;

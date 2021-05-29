@@ -6,18 +6,16 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 14:58:46 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/28 19:35:05 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/29 15:12:47 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
-# include <strings.h>
-# include <unistd.h>
 
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
@@ -45,16 +43,13 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
-char 	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-
-
-
-
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

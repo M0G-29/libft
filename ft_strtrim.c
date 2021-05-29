@@ -6,13 +6,13 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 23:15:38 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/28 19:35:56 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/29 15:11:46 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*alloc;
 	int		start;

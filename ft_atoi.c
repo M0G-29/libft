@@ -6,13 +6,13 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:12:04 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/21 19:18:25 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/29 14:55:16 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	long			result;
 	long			sign;

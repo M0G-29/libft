@@ -21,17 +21,17 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	char		c_src;
 
 	i = 0;
-	t_dest = dest;//variaveis temporarias para nao mexer na memoria do original (conteudo)
+	t_dest = dest;
 	t_src = src;
 	while (i < n)
 	{
-		c_src = t_src[i];//verificação de caracter por caracter 
-		t_dest[i] = t_src[i];//copia normalmente entre as variaveis temporarias
+		c_src = t_src[i];
+		t_dest[i] = t_src[i];
 		i++;
-		if (c_src == c)//se o caracter for igual a o parametro de c entra.
+		if (c_src == c)
 		{
-			ret_str = (char*)&t_dest[i];// copia o enderço de memoria ou seja o conteudo a partir da pocição atual do "i"???
-			return ret_str;//retorna a partir do parametro encontrado na string adiante
+			ret_str = (char *)&t_dest[i];
+			return (ret_str);
 		}
 	}
 	return (NULL);

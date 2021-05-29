@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 19:04:24 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/28 19:36:51 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/05/29 15:05:44 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	ft_putnbr_fd(int nb, int fd)
 	}
 	if (nb <= 9)
 	{
-		x = nb+ '0';
+		x = nb + '0';
 		ft_putchar_fd(x, fd);
-		return;
+		return ;
 	}
 	else
 	{
