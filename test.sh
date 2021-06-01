@@ -1,6 +1,6 @@
-cd ~
-git clone git@github.com:M0G-29/libft.git
-cd libft
+//cd ~
+//git clone git@github.com:M0G-29/libft.git
+//cd libft
 norminette *.c *.h
 
 cd ~
@@ -24,7 +24,7 @@ sed -i '' "s/PATH_LIBFT=../PATH_LIBFT=..\/libft/" my_config.sh
 cd ~
 cd libft
 git clone https://github.com/Tripouille/libftTester.git
-cd libftTester
+cd libftTester/
 make
 
 cd ~
