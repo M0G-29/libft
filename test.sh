@@ -28,4 +28,4 @@ cd libftTester/
 make
 
 cd ~
-rm -rf libft Libftest libft-unit-test libft-war-machine libftTester
+rm -rf libft Libftest libft-unit-test libft-war-machine
