@@ -6,33 +6,32 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:12:04 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 14:55:16 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 16:14:47 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_ignore(char c)
+{
+	if ((c >= 9 && c <= 13) || c == ' ')
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	long			result;
-	long			sign;
-	unsigned int	i;
+	int	sign;
+	int	number;
 
-	result = 0;
-	i = 0;
 	sign = 1;
-	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = result * 10 + nptr[i] - '0';
-		i++;
-	}
-	return ((int)(result * sign));
+	number = 0;
+	while (ft_ignore(*nptr) == 1)
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+		if (*nptr++ == '-')
+			sign *= -1;
+	while (ft_isdigit(*nptr) == 1)
+		number = number * 10 + (*nptr++ - '0');
+	return (number * sign);
 }
