@@ -6,39 +6,33 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:12:04 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 16:56:12 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 17:12:11 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+int	ft_atoi(const char *nptr)
 {
-	if (c == ' ' || c == '\n' || c == '\t' ||
-			c == '\v' || c == '\f' || c == '\r')
-		return (1);
-	else
-		return (0);
-}
+	long			result;
+	long			sign;
+	unsigned int	i;
 
-int	ft_atoi(const char *str)
-{
-	long int	result;
-	int	sign;
-	int	i;
-
-	i = 0;
 	result = 0;
+	i = 0;
 	sign = 1;
-	while (str[i] != '\0' && ft_isspace(str[i]) == 1)
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if ((str[i] == '-') || (str[i] == '+'))
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		result = (result * 10) + (str[i++] - '0');
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
 	}
-	return ((int)result * sign);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + nptr[i] - '0';
+		i++;
+	}
+	return ((int)(result * sign));
 }
