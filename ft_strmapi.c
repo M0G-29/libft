@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 14:46:13 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 16:16:09 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:22:02 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ns[i] = '\0';
 	return (ns);
 }
+
+/*
+	Percorre uma string mudando caracter por caracter de acordo com a função
+passada no parametro.
+*/
