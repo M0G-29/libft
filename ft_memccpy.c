@@ -30,3 +30,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*Copia src para dest e quando o 'c' é achado retorna a proxima posicao para 
+frente
+
+	Faz o cast passando o conteudo de dest e src para char, enquanto passa o
+conteudo de src para dest o src ta passando tbm conteudo para found se em
+algum momento o found é igual a 'c' ela retorno a posicao atual + 1 para frente
+*/

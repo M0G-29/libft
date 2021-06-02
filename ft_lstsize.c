@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 00:38:41 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 14:03:51 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:24:44 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+/*
+	Conta o tamanho da lista.
+*/

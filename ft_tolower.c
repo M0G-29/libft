@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 18:17:59 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/22 18:19:19 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:17:14 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,7 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+/*
+	Se o parametro for um caracter maiusculo retorna ele minusculo.
+*/

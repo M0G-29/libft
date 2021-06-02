@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 13:48:18 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:11:21 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:16:38 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+	Se 'little' existir em 'big' retorna a a partir da ocorrencia adiante.
+
+	Percorre o 'big' e ao mesmo tempo em cada posição compara para ver se o
+caracter é igual ao 'little' se for ele entra no segundo while. Este while
+vai comparar as posições futuras de 'big' para saber se 'little' existe ate o
+fim da string e que nao terminou o delimitador 'len'. Obs: precisa garantir que
+o 'little' foi achado por completo em 'big'.
+*/

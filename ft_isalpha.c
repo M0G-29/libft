@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:43:00 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:00:21 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:21:40 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,7 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+/*
+se o parametro passado for uma letra alfabetica retorna 1 se nao 0
+*/

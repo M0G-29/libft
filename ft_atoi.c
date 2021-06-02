@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:12:04 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 17:12:11 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:20:19 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ int	ft_atoi(const char *nptr)
 	}
 	return ((int)(result * sign));
 }
+
+/*
+	transforma um char numerico em int.
+
+	primeiro while elimina todos os tipos de espacos.
+	segundo if se o final for positivo nao mexe no sign se for negativo trans-
+forma em negativo para no fim colocar o result em negativo.
+	segundo while, transforma em numero, multiplica por 10 para aumentar uma
+casa q seria o 0 dps converte o numero e adiciona no lugar do 0 por soma
+e o result vai guardando ate retornar.
+*/

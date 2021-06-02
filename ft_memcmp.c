@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:06:48 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:02:50 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:28:26 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+	Compara duas strings por um tamanho limitado por 'n' na primeira diferenciação
+que tiver retorna a diferença.
+*/

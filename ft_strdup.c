@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 16:29:07 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:08:36 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:15:14 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,8 @@ char	*ft_strdup(const char *s)
 	a[cont1] = '\0';
 	return (a);
 }
+
+/*
+	Copia uma string para uma outra variavel e retorna a string copiada.
+	Obs: tem malloc.
+*/

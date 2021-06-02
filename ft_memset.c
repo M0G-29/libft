@@ -23,3 +23,7 @@ void	*ft_memset (void *dest, int str, size_t n)
 		n_dest[i++] = (unsigned char) str;
 	return (dest);
 }
+
+/*
+	Incrementa 'str' em 'dest' delimitado por 'n'. Retorna a string modificada.
+*/

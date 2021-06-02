@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 01:13:54 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 15:16:27 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:22:57 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last_element = ft_lstlast(*lst);
 	last_element->next = new;
 }
+
+/*
+	adiciona um novo elemento no fim da lista
+*/

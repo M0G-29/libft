@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:56:23 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/21 14:54:51 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:22:24 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,7 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+/*
+se o parametro passado for um caracter printavel retorna 1 se nao 0
+*/

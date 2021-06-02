@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:18:23 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/22 16:41:57 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:16:45 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+
+/*
+	Procura a ultima ocorrencia de 'c' na string e retorna de lá adiante.
+
+	Pega o tamanho da string e vai de tras para frente '<-' pois assim se achar
+'c' em 's' ja sabe que é a ultima ocorrencia.
+*/

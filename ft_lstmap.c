@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 13:47:36 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 16:09:32 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:24:26 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (head);
 }
+
+/*
+	Cria uma nova lista do tamanho da lst porem com content especificos.
+
+	lstnew recebe uma função como parametro ou seja essa função do parametro
+esta criando uma informação para ser passada de content para os lstnew q vai
+criar um elemento com aquele content. Se for NULL da clear Obs: usamos '&'
+porque é ponteiro duplo.
+	lstadd_back adciona o novo elemento criado no fim do head(a nova lista).
+*/

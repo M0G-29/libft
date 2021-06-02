@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 18:35:51 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:06:14 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:14:44 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }
+
+/*
+	escreve uma string.
+*/

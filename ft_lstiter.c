@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:29:20 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/06/01 13:53:47 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 22:24:06 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+/*
+	Modifica cada elemento da lista de acordo com função passada.
+*/

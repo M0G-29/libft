@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 19:04:24 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:05:44 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:14:36 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,11 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putnbr_fd(nb % 10, fd);
 	}
 }
+
+/*
+	Escreve o numero informado de acordo com 'fd'.
+
+	Primeiro tratamento é para o overflow. Se o 'nb' for negativo escreve '-'
+e converte o sinal. Por recursao ele vai separar os numero e dps fazer o modulo
+assim q fizer o modulo ja entra no if se for verdade e escreve.
+*/

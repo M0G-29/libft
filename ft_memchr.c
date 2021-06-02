@@ -22,3 +22,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*procura 'c' na string com tamanho delimitado de busca e retorna a primeira
+ocorrencia
+
+	Enquanto o 'n' decresce o '*s' aumenta e se compara com 'c' se for igual
+retorna a posição dele no momento que ocorre o match.
+*/

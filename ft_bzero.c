@@ -22,3 +22,7 @@ void	ft_bzero(void *s, size_t len)
 	while (i++ < len)
 		*ns++ = 0;
 }
+
+/*
+adicional 0 ou NULL na string ate o tamanho determinado.
+*/

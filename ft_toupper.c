@@ -6,7 +6,7 @@
 /*   By: lpaulo-d <lpaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:01:07 by lpaulo-d          #+#    #+#             */
-/*   Updated: 2021/05/29 15:12:15 by lpaulo-d         ###   ########.fr       */
+/*   Updated: 2021/06/01 23:17:25 by lpaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,7 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
+
+/*
+	Se o parametro for um caracter minusculo retorna ele maiusculo.
+*/
